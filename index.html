@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+
+
+</head>
+
+<body>
+    <a-scene>
+        <!--FLoor and background-->
+        <a-assets>
+            <img id="walltexture" src="https://cdn5.vectorstock.com/i/1000x1000/28/84/mossy-stone-seamless-texture-vector-582884.jpg">
+            <img id="stones" src="stone.jpg">
+        </a-assets>
+        <a-plane static-body position="0 -1 0" rotation="-90 0 0" width="200" height="200" src="walltexture3.jpg"></a-plane>
+        <!--<a-plane static-body position="0 5 0" rotation="-90 0 0" width="100" height="100" color="aliceblue"></a-plane>-->
+        <a-sky color="aliceblue"></a-sky>
+        <!--starting walls: -->
+        <a-box static-body position="3 0 0" id="wall1right" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
+        <a-box static-body position="-3 0 0" id="wall1left" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+        <a-box id="wallback" color="silver" depth=".5" position="0 0 2.5" height="7" width="6.5" rotation="0 0 0" width="10" src="walltexture.jpg"></a-box>
+        <a-box static-body position="-5.5 0 -5" id="wall2left" color="silver" depth=".5" height="7" width="6" rotation="0 0 0" src="walltexture.jpg"></a-box>
+        <a-box static-body position="5.5 0 -5" id="wall2right" color="silver" depth=".5" height="7" width="6" rotation="0 0 0" src="rock2.jpg"></a-box>
+
+        <!--Win Room-->
+        <a-box id="back" color="teal" depth=".5" position="0 0 5.2" height="7" width="6.5" rotation="0 0 0" width="10"></a-box>
+        <a-box id="wall1" color="teal" depth=".5" position="3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
+        <a-box id="wall2" color="teal" depth=".5" position="-3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
+        <a-box id="back2" color="teal" depth=".5" position="0 0 12" height="7" width="6.5" rotation="0 0 0" width="10"></a-box>
+        <a-entity static-body gblock="https://poly.google.com/view/f7SU-dO1FG7" id="party1" rotation="0 250 0" position="1 -9 8" scale="4 4 4"></a-entity>
+
+
+            <!--<a-box static-body position="7 0 -5" id ="wall3right" color="silver" depth=".5" height="7" width="3" rotation="0 270 0" src="walltexture.jpg"></a-box>-->
+
+
+            <!--Sita maze part-->
+            <a-box static-body position="8.5 0 -10" id="wall1rightS" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="rock2.jpg"></a-box>
+            <a-box static-body position="5 0 -11" id="wall1leftS" color="silver" depth=".5" height="7" width="8" rotation="0 270 0" src="rock2.jpg"></a-box>
+            <!--<a-box color="darkturquoise" depth=".5" height="1" width="1.75" position="5 3 -6.12" rotation="0 90 0"></a-box>-->
+            <!--<a-text position="4.4 2.8 -6.7" value ="Sita Path" color="black" rotation="0 270 0"></a-text>-->
+            <a-box id="inbetweeenwall" color="white" dept=".5" height="7" width="2" static-body position="3.962 0 -10.518" src='rock2.jpg'></a-box>
+            <a-box color="white" depth="2" height="2" width="3.5" static-body position="7 -1 -6" src="rock2.jpg"></a-box>
+            <a-box id="stair" color="white" depth="1" height="1" width="2.7" rotation="0 90 0" static-body position="5 -1 -5.7" src="rock2.jpg"></a-box>
+            <a-box id="lavafloor" class="lava" color="white" depth="7.7" height=".5" width="3.2" static-body position="6.8 -1 -10.7" src="lava.jpg"></a-box>
+            <a-text position="7.9 1.5 -8" value="DO NOT TOUCH THE LAVA" color="red" rotation="0 270 0"></a-text>
+            <a-box id="rock1" color="white" depth="1.5" height="2" width="6.3" rotation="0 90 0" static-body position="6.7 -1 -11" src="rock2.jpg"></a-box>
+            <!--<a-box id="rock1" color="white" depth="1" height="1" width="2.5" static-body position="6.7 -1 -8" src="rock2.jpg"></a-box>-->
+            <!--<a-box id="rock2" color="white" depth="1" height="1" width="2.5" static-body position="6.7 -1 -10" src="rock2.jpg"></a-box>-->
+            <!--<a-box id="rock3" color="white" depth="1" height="1" width="2.5" static-body position="6.7 -1 -12" src="rock2.jpg"></a-box>-->
+            <a-box id="checkpointbox" color="white" depth="2.7" height="2" width="3.5" static-body position="7 -1 -16" src="rock2.jpg"></a-box>
+            <a-box id="checkwall" color="white" depth=".5" height="7" width="2.6" rotation="0 90 0" static-body position="5 0 -16.2" src='rock2.jpg'></a-box>
+            <a-box id="checkwall2" color="white" depth=".5" height="7" width="10" static-body position="10 0 -17" src='rock2.jpg'></a-box>
+            <a-box id="checkwall3" color="white" depth=".5" height="7" width="4.4" static-body position="10.59 0 -14.7" src='rock2.jpg'></a-box>
+            <a-box id="lavafloor2" class="lava" color="white" depth="2" height="1" width="5" static-body position="10.25 -1 -16" src="lava.jpg"></a-box>
+            <a-box id="cheatwall" color="white" depth=".5" height="7" width="2.6" rotation="0 90 0" static-body position="15.220 0 -15.963" src='rock2.jpg'></a-box>
+            <!--<a-text id="safetext" position="14 2.6 -16.8" value ="CLICK HERE" color="red" rotation="0 270 0"></a-text>-->
+            <a-box id="safe" color="white" depth=".5" height="1" width="2" rotation="0 90 0" static-body position="14.9 2.7 -15.5.5" src='rock2.jpg'></a-box>
+            <a-box id="newfloor" color="white" depth="2" height=".9" width="5" static-body position="10.25 -1 -16" src="rock2.jpg"></a-box>
+            <a-box id="newfloor2" color="white" rotation="0 90 0" depth="2.2" height=".9" width="7" static-body position="13.851 -1 -14.358" src="rock2.jpg"></a-box>
+            <a-box id="newfloor2" color="white" rotation="0 90 90" depth="2.2" height=".9" width="7" static-body position="13.851 -1 -14.352" src="rock2.jpg"></a-box>
+
+
+
+            <!--Jason maze part-->
+            <a-box static-body position="-8 0 -10" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+            <a-box position="-3 0 -14.5" depth=".5" height="7" width="9" rotation="0 270 0" src="walltexture.jpg"></a-box>
+            <a-entity static-body gblock="https://poly.google.com/view/f4iwEhEP3-d" id="spike" position="-5 4 -13 0 0" scale="0.3 0.3 0.3">
+            </a-entity>
+            <a-box static-body id="trap1" position=" -5 -1 -13" depth=".5" height=".02" width=".08" rotation="0 0 0" a src="walltexture3.jpg"></a-box>
+            <a-box static-body position="-12.767 0 -15.247" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+            <a-box static-body position="-3 0 -20" id="bwall1lefty" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+              <a-box static-body position="-8 0 -24" id="bwall1lefty" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+               <a-box static-body position="-12.767 0 -19.247" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+               <a-entity static-body gblock="https://poly.google.com/view/3XX56qjUA5-" id="sword" position="0 0 0" scale="0.5 0.5 0.5">
+                   
+               </a-entity>
+            <!--Breyon maze part-->
+            <a-box static-body position="3 0 -15" id="bwall1right" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
+            <a-box static-body position="-2.5 0 -15" id="bwall1left" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+            <a-text position="0 1.5 -10" value="Watch your step!" color="Black"></a-text>
+            <!--<a-cylinder static-body position="1.5 -.75 -11" radius="0.65" height="2.3" color="#FFC65D"></a-cylinder>-->
+            <a-cylinder static-body position="1 -.75 -13" radius="0.7" height="2.44" color="#FFC65D"></a-cylinder>
+            <a-cylinder static-body position="1.3 -.75 -15" radius="0.7" height="2.4" color="#FFC65D"></a-cylinder>
+            <a-cylinder  position="1.1 -.75 -17.5" radius="0.7" height="2.34" color="#FFC65D"></a-cylinder>
+            <a-cylinder static-body position="1.5 -.75 -19.5" radius="0.7" height="2.3" color="#FFC65D"></a-cylinder>
+            <a-cylinder static-body position="-1.2 -.75 -18" radius="0.6" height="2.55" color="#FFC65D"></a-cylinder>
+            <a-cylinder ="-1.6 -.75 -16" radius="0.8" height="2.25" color="#FFC65D"></a-cylinder>
+            <a-cylinder position="-1 -.75 -11" radius="0.81" height="2.23" color="#FFC65D"></a-cylinder>
+            <a-cylinder static-body position="-1.4 -.75 -12.5" radius="0.8" height="2.5" color="#FFC65D"></a-cylinder>
+            <a-ocean id="water" color="aqua" depth="10" length="7.5" position="0 0 -15" width="6"></a-ocean>
+            <a-box static-body position="0 -1 -9.75" color="green" depth=".5" width="6" height="2.4"></a-box>
+            <a-box static-body position="0 -1 -9.3" color="green" depth=".5" width="6" height="1.2"></a-box>
+            <a-plane id="waterplane" static-body position="0 -.5 -15" width="10" length="40.5" depth="10" color="red" rotation="-90 180 90"></a-plane>
+            <a-box static-body position="0 -1 -20.28" color="black" depth=".5" width="6" height="2.4"></a-box>
+            <a-box static-body position="0 -1 -20.68" color="black" depth=".5" width="6" height="1.2"></a-box>
+
+
+            <!--Make a player/camera entity, and give it the attributes we need it to have in order control camera with mouse, movement with WASD, and jump with spacebar-->
+            <a-entity class="player" id="player" camera universal-controls="fly: false" kinematic-body jump-ability position="0 0 0">
+
+                <a-cursor></a-cursor>
+
+            </a-entity>
+    </a-scene>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
