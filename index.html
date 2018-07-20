@@ -5,6 +5,7 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 
 
 </head>
@@ -18,7 +19,8 @@
         </a-assets>
         <a-plane static-body position="0 -1 0" rotation="-90 0 0" width="200" height="200" src="walltexture3.jpg"></a-plane>
         <!--<a-plane static-body position="0 5 0" rotation="-90 0 0" width="100" height="100" color="aliceblue"></a-plane>-->
-        <a-sky color="aliceblue"></a-sky>
+        
+        <a-sky color="white" src="sky.jpg"></a-sky>
         <!--starting walls: -->
         <a-box static-body position="3 0 0" id="wall1right" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
         <a-box static-body position="-3 0 0" id="wall1left" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
@@ -28,10 +30,15 @@
 
         <!--Win Room-->
         <a-box id="back" color="teal" depth=".5" position="0 0 5.2" height="7" width="6.5" rotation="0 0 0" width="10"></a-box>
-        <a-box id="wall1" color="teal" depth=".5" position="3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
-        <a-box id="wall2" color="teal" depth=".5" position="-3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
-        <a-box id="back2" color="teal" depth=".5" position="0 0 12" height="7" width="6.5" rotation="0 0 0" width="10"></a-box>
-        <a-entity static-body gblock="https://poly.google.com/view/f7SU-dO1FG7" id="party1" rotation="0 250 0" position="1 -9 8" scale="4 4 4"></a-entity>
+        <a-box id="wall1" color="teal" depth=".5" static-body position="3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
+        <a-box id="wall2" color="teal" depth=".5"  position="-3 0 8.618" height="7" width="6.5" rotation="0 90 0" width="10"></a-box>
+         <a-box id="wall3" src="walltexture.jpg" static-body depth=".5"  position="-3 0 8.618" height="7" width="4.5" rotation="0 0 0" width="10"></a-box>
+        
+        <a-box id="back2" color="teal" depth=".5" static-body position="0 0 12" height="7" width="6.5" rotation="0 0 0" width="10"></a-box>
+        <a-entity gblock="https://poly.google.com/view/f7SU-dO1FG7" id="party1" rotation="0 250 0" position="1 -9 8" scale="4 4 4"></a-entity>
+        <a-entity gblock="https://poly.google.com/view/8kBCtHphxJU" id="party2" rotation="0 250 0" position="1 .11 8" scale="3 3 3"></a-entity>
+        <a-entity gblock="ht]tps://poly.google.com/view/8kBCtHphxJU" id="party2" rotation="0 250 0" position="-1.5 .11 8" scale="3 3 3"></a-entity>
+        
 
 
             <!--<a-box static-body position="7 0 -5" id ="wall3right" color="silver" depth=".5" height="7" width="3" rotation="0 270 0" src="walltexture.jpg"></a-box>-->
@@ -61,11 +68,16 @@
             <a-box id="safe" color="white" depth=".5" height="1" width="2" rotation="0 90 0" static-body position="14.9 2.7 -15.5.5" src='rock2.jpg'></a-box>
             <a-box id="newfloor" color="white" depth="2" height=".9" width="5" static-body position="10.25 -1 -16" src="rock2.jpg"></a-box>
             <a-box id="newfloor2" color="white" rotation="0 90 0" depth="2.2" height=".9" width="7" static-body position="13.851 -1 -14.358" src="rock2.jpg"></a-box>
-            <a-box id="newfloor2" color="white" rotation="0 90 90" depth="2.2" height=".9" width="7" static-body position="13.851 -1 -14.352" src="rock2.jpg"></a-box>
+            <a-box id="newwall2" color="white" rotation="0 90 90" depth="2.2" height=".9" width="7" static-body position="13.851 0 -14.352" src="rock2.jpg"></a-box>
+            <a-entity static-body gblock="https://poly.google.com/view/63J4a-DFyQ8" id="trophy" position="7.703 -8.911 -13.253" scale="5 5 5"></a-entity>
 
 
 
             <!--Jason maze part-->
+              <a-box static-body position="-11 0 -32.3" id="bwall1right" color="silver" depth=".5" height="7" width="16.5" rotation="0 0 0" src="walltexture.jpg"></a-box>
+               <a-box static-body position="-11 0 -32.3" id="bwall1right" color="silver" depth=".5" height="7" width="16.5" rotation="0 27 0" src="walltexture.jpg"></a-box>
+               <a-box static-body position="-16 0 -32.3" id="bwall1right" color="silver" depth=".5" height="7" width="18.5" rotation="0 270 0" src="walltexture.jpg"></a-box>
+              <a-text  id="efver" position="0 2 0" value="Click on box" color="black" rotation="0 270 0"></a-text>
             <a-box static-body position="-8 0 -10" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
             <a-box position="-3 0 -14.5" depth=".5" height="7" width="9" rotation="0 270 0" src="walltexture.jpg"></a-box>
             <a-entity static-body gblock="https://poly.google.com/view/f4iwEhEP3-d" id="spike" position="-5 4 -13 0 0" scale="0.3 0.3 0.3">
@@ -75,36 +87,73 @@
             <a-box static-body position="-3 0 -20" id="bwall1lefty" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
               <a-box static-body position="-8 0 -24" id="bwall1lefty" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
                <a-box static-body position="-12.767 0 -19.247" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
-               <a-entity static-body gblock="https://poly.google.com/view/3XX56qjUA5-" id="sword" position="0 0 0" scale="0.5 0.5 0.5">
-                   
+               <a-box static-body position="-22.8 0 -10.747" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+                <a-box static-body position="-20.767 0 -23.2" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+                <a-box static-body id="door" position="-17.5 0 .5" depth=".5" height="7" width="30" rotation="0 270 0" src="walltexture.jpg"></a-box>
+                <a-box static-body id="door" position="-14 0 -2" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+                  <a-box static-body id="door" position="-9 0 3.2" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+                 <a-box static-body position="-12.767 0 -14.747" depth=".5" height="7" width="10" rotation="0 0 0" src="walltexture.jpg"></a-box>
+               <a-box static-body position="-25.767 0 -17" depth=".5" height="7" width="12" rotation="0 270 0" src="walltexture.jpg"></a-box>
+             <a-box static-body id="trap2" position=" -24 -1 -17" depth=".5" height="1" width="0.5" rotation="0 0 0" a color="white"></a-box>
+               <a-box static-body id="trap3" position=" -24 -1 -13.5" depth=".5" height="1" width="0.5" rotation="0 0 0" a color="black"></a-box>
+                <a-box static-body id="trap4" position=" -24 -1 -20.5" depth=".5" height="1" width="0.5" rotation="0 0 0" a color="grey"></a-box>
+               
+               <a-entity static-body gblock="https://poly.google.com/view/3XX56qjUA5-" id="sword" position="-12 -0.5 -24.5" scale="0.65 0.65 0.65" rotation="0 270 0">
                </a-entity>
+               <a-entity static-body gblock="https://poly.google.com/view/1Kkg1bReE3D" id="arrow" scale="1.5 1.5 1.5" rotation="0 270 0" position="-12 -2.7 -12">
+                   </a-entity>
             <!--Breyon maze part-->
             <a-box static-body position="3 0 -15" id="bwall1right" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
             <a-box static-body position="-2.5 0 -15" id="bwall1left" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
             <a-text position="0 1.5 -10" value="Watch your step!" color="Black"></a-text>
-            <!--<a-cylinder static-body position="1.5 -.75 -11" radius="0.65" height="2.3" color="#FFC65D"></a-cylinder>-->
+            <a-cylinder static-body position="1.5 -.75 -11" radius="0.65" height="2.3" color="#FFC65D"></a-cylinder>
             <a-cylinder static-body position="1 -.75 -13" radius="0.7" height="2.44" color="#FFC65D"></a-cylinder>
             <a-cylinder static-body position="1.3 -.75 -15" radius="0.7" height="2.4" color="#FFC65D"></a-cylinder>
             <a-cylinder  position="1.1 -.75 -17.5" radius="0.7" height="2.34" color="#FFC65D"></a-cylinder>
             <a-cylinder static-body position="1.5 -.75 -19.5" radius="0.7" height="2.3" color="#FFC65D"></a-cylinder>
             <a-cylinder static-body position="-1.2 -.75 -18" radius="0.6" height="2.55" color="#FFC65D"></a-cylinder>
-            <a-cylinder ="-1.6 -.75 -16" radius="0.8" height="2.25" color="#FFC65D"></a-cylinder>
+            <a-cylinder static-body position="-1.6 -.75 -16" radius="0.73" height="2.25" color="#FFC65D"></a-cylinder>
             <a-cylinder position="-1 -.75 -11" radius="0.81" height="2.23" color="#FFC65D"></a-cylinder>
             <a-cylinder static-body position="-1.4 -.75 -12.5" radius="0.8" height="2.5" color="#FFC65D"></a-cylinder>
             <a-ocean id="water" color="aqua" depth="10" length="7.5" position="0 0 -15" width="6"></a-ocean>
-            <a-box static-body position="0 -1 -9.75" color="green" depth=".5" width="6" height="2.4"></a-box>
-            <a-box static-body position="0 -1 -9.3" color="green" depth=".5" width="6" height="1.2"></a-box>
-            <a-plane id="waterplane" static-body position="0 -.5 -15" width="10" length="40.5" depth="10" color="red" rotation="-90 180 90"></a-plane>
+            <a-box static-body position="0 -1 -9.75" color="black" depth=".5" width="6" height="2.4"></a-box>
+            <a-box static-body position="0 -1 -9.3" color="black" depth=".5" width="6" height="1.2"></a-box>
+            <a-plane id="waterplane" static-body position="0 -.5 -15" width="10" length="40.5" depth="10" color="aqua" rotation="-90 180 90"></a-plane>
             <a-box static-body position="0 -1 -20.28" color="black" depth=".5" width="6" height="2.4"></a-box>
             <a-box static-body position="0 -1 -20.68" color="black" depth=".5" width="6" height="1.2"></a-box>
+            <!--<a-entity position="0 0 -15" particle count="100" particle spread=" 0 0 -15" particle-system="color: #EF0000,#44CC00;" preset="rain"></a-entity>-->
+             <a-box static-body position="3 0 -25" id="bwall1right2" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
+            <a-box static-body position="-2.5 0 -25" id="bwall1left2" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+            <a-tetrahedron static-body position="-1.6 -.75 -23" color="#FF926B" radius="2.5" ></a-tetrahedron>
+            <a-tetrahedron static-body position="1.6 -.75 -27" color="#FF926B" radius="2.5" ></a-tetrahedron>
+             <a-tetrahedron static-body position="-1.6 -.75 -31" color="#FF926B" radius="2.5" ></a-tetrahedron>
+              <a-tetrahedron static-body position="1.6 -.75 -35" color="#FF926B" radius="2.5" ></a-tetrahedron>
+              <a-box static-body position="3 0 -35" id="bwall1right2" color="silver" depth=".5" height="7" width="10" rotation="0 90 0" src="walltexture.jpg"></a-box>
+            <a-box static-body position="-2.5 0 -35" id="bwall1left2" color="silver" depth=".5" height="7" width="10" rotation="0 270 0" src="walltexture.jpg"></a-box>
+             <a-plane id="triangleplane" static-body position="0 -.788 -30" width="10" length="60" depth="10" color="silver" src="walltexture3.jpg" rotation="-90 180 90"></a-plane>
+              <a-box static-body position="0 0 -40" id="backwall" color="silver" depth=".5" height="7" width="5.5" rotation="0 0 0" src="walltexture.jpg"></a-box>
+               <a-box static-body position="0 -1 -39.5" color="black" depth=".5" width="6.5" height="2.4"></a-box>
+            <a-box static-body position="0 -1 -39.1" id="laststep" color="black" depth=".5" width="6.5" height="1.2"></a-box>
+               
 
 
             <!--Make a player/camera entity, and give it the attributes we need it to have in order control camera with mouse, movement with WASD, and jump with spacebar-->
-            <a-entity class="player" id="player" camera universal-controls="fly: false" kinematic-body jump-ability position="0 0 0">
-
-                <a-cursor></a-cursor>
-
+             <a-text position="0 1.5 -10" value="Watch your step!" color="Black"></a-text>
+               
+               <a-entity class="player" id="player"
+              
+                camera
+                jump-ability
+                universal-controls="fly:false"
+                kinematic-body
+                position="0 0 0">
+                
+                       <a-cursor></a-cursor>
+                
             </a-entity>
+           
+
+           
     </a-scene>
 </body>
 <script type="text/javascript" src="script.js"></script>
